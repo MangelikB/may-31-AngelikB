@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transform Angelik Bautista</title>
+    <style>
+        .container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #333;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .rotate:hover {
+            transform: rotate(180deg);
+            background-color: green;
+        }
+
+        .scale:hover {
+            transform: scale(0.5);
+        }
+
+        .translate:hover {
+            transform: translate(50px);
+        }
+
+        .skew:hover {
+            transform: skew(40deg, 20deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box rotate">Rotate</div>
+        <div class="box scale">Scale</div>
+        <div class="box translate">Translate</div>
+        <div class="box skew">Skew</div>
+    </div>
+</body>
+</html>

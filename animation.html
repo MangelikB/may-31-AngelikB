@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation circle</title>
+   
+    <style>
+       
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+       
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            animation: rotateBox 4s , changeColor 4s infinite;
+        }
+
+        
+        @keyframes rotateBox {
+            0% {
+                transform: rotate(0deg);
+            }
+            10% {
+                transform: rotate(30deg);
+            }
+            20% {
+                transform: rotate(60deg);
+            }
+            30% {
+                transform: rotate(90deg);
+            }
+            40% {
+                transform: rotate(120deg);
+            }
+            50% {
+                transform: rotate(150deg);
+            }
+            60% {
+                transform: rotate(180deg);
+            }
+            70% {
+                transform: rotate(220deg);
+            }
+            80% {
+                transform: rotate(250deg);
+            }
+            90% {
+                transform: rotate(360deg);
+            }
+            
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes changeColor {
+            0% {
+                background-color: #3498db;
+            }
+            50% {
+                background-color: #e74c3c;
+            }
+            100% {
+                background-color: #3498db;
+            }
+        }
+        .jump {
+            animation-name: jump;
+            animation-duration: 1s;
+            margin: 150px;
+            
+        }
+
+        @keyframes jump {
+        0% {
+            background-color: #db8a34;
+            }
+        50% {
+                background-color: #5c008a;
+            }
+        100% {
+                background-color: #db8a34;
+            }
+        50% {
+            transform: translate(0, -100px); }
+        }
+        .swing {
+        animation-name: swing;
+        animation-duration: 3s;
+        animation-delay: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-fill-mode: backwards;
+        animation-timing-function: ease-in-out;
+        background-color: rgb(232, 44, 154);
+        margin:80px;
+        }
+
+        @keyframes swing {
+        0%, 100% { 
+            border-radius: 50%; 
+            transform-origin: 0 -100px; 
+        }
+        
+        0% { 
+            transform: rotate(90deg); 
+        }
+        
+        100% { 
+            transform: rotate(-90deg);
+        }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box jump"></div>
+        <div class="box swing"></div>
+        <div class="bar wave"></div>
+        <div class="bar wave"></div>
+        <div class="bar wave"></div>
+        <div class="bar wave"></div>
+        <div class="bar wave"></div>    
+    </div>
+</body>
+</html>

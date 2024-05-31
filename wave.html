@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave</title>
+</head>
+<body>
+    <h1>WAVE</h1>
+    <div class="bar wave"></div>
+    <div class="bar wave"></div>
+    <div class="bar wave"></div>
+    <div class="bar wave"></div>
+    <div class="bar wave"></div>
+</body>
+<style>
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: rgb(0, 180, 87);
+}
+html,body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 100%;
+  height: 100%;
+  background-color: #eaeaea;
+}
+
+.bar {
+  width: 20px;
+  height: 100px;
+  margin: 0 2px;
+}
+
+@keyframes wave {
+  0%, 50%, 100% { 
+    background-color: rgb(187, 75, 234); 
+    transform: scale(1);
+  }
+  25% {
+    background-color: rgb(37, 205, 235);
+    transform: scale(1, 2);
+  }
+  75% {
+    background-color: rgb(236, 55, 179);
+    transform: scale(1, 0.5);
+  }
+}
+
+.wave {
+  animation-name: wave;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+</style>
+</html>
